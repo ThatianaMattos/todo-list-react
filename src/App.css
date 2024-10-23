@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #FF6700, #C8197B);
+  margin: 0;
+  padding: 20px;
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  background: linear-gradient(135deg, #FF6700, #C8197B);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+#input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+input[type="text"] {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 10px;
+  width: 70%;
+  background-color: #F5F5F5;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: #FF6700;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #C8197B;
+}
+
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+#task-list li {
+  background-color: #F5F5F5;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #333;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+
+#task-list li:hover {
+  background-color: #E0E0E0;
+  transform: scale(1.05);
+}
+
+
+#task-list li.completed {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  background-color: #E0E0E0;
+}
+
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-btn,
+.edit-btn,
+.complete-btn {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.complete-btn {
+  background-color: #28A745;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-btn {
+  background-color: #FF6700;
+}
+
+.delete-btn {
+  background-color: #FF0000;
+}
+
+
+#filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#filters button {
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+
+#clear-completed {
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #C8197B;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#task-counter {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
 }
